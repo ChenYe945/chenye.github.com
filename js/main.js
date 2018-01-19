@@ -21,6 +21,9 @@ var vm = avalon.define({
     },
     change_img:function (index) {
         this.img_index = index;
+    },
+    goto:function (who) {
+        $('html,body').animate({scrollTop:$(who).offset().top/1.2}, 200);
     }
 })
 vm.init();

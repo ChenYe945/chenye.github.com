@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+.min-width
+{
+    min-width: 1200px;
+}
 .header {
     position: fixed;
     left: 0;
@@ -14,10 +17,11 @@
     font-family: 'Hind,sans-serif';
     z-index: 100;
 }
+
 .img-container,
 .header > .menu > ul > li,
 .middle-left,
-.about-left{
+.about-left {
     float: left;
 }
 
@@ -29,11 +33,6 @@
 
 .img-container > img {
     width: 100%;
-}
-
-.header > .menu {
-    float: right;
-    margin-right: 9%;
 }
 
 .header > .menu > ul {
@@ -90,11 +89,14 @@
     margin: 0;
 }
 
+.right-margin {
+    float: right;
+    margin-right: 9%;
+}
+
 .middle-right {
     position: relative;
-    float: right;
     margin-top: 16px;
-    margin-right: 4%;
     width: 520px;
     border: 1px solid #000000;
 }
@@ -122,34 +124,89 @@
     margin: 10px;
     cursor: pointer;
 }
-#about{
-    width: 100%;
-    padding-top: 100px;
+#home .img-index-clolr{
+    background-color: #b2e2fa;
+    color: #ffffff;
 }
-.about-left{
+
+#about {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.title {
     margin-left: 10%;
 }
-.about-left>h3{
+
+.title > h3 {
     padding: 0;
     font-size: 30px;
     font-weight: 700;
     color: #515769;
     line-height: 1.4;
-    margin: 0 0 15px;
+    margin: 0 0 -3px 0;
 }
-.about-left>span{
+
+.about-left > span,
+#experience > .title > span {
     font-size: 15px;
     font-weight: 400;
     color: #a6a7aa;
     margin-bottom: 15px;
 }
-.about-right{
-    float: right;
-    margin-right: 4%;
-}
-.about-me>p{
+
+.about-me > p {
     font-size: 15px;
     font-weight: 400;
     color: #a6a7aa;
     margin-bottom: 15px;
+}
+
+#about .skill .am-progress {
+    margin-bottom: 1rem;
+}
+
+#experience {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #fafafa;
+}
+
+.company-content,
+.company {
+    width: 251px;
+    height: 233px;
+}
+
+.company-content {
+    float: left;
+    background-color: #ffffff;
+}
+
+.company-content:nth-child(2) {
+    background-color: #17bed2;
+    color: #ffffff;
+}
+.company-content:nth-child(2) h4,
+.company-content:nth-child(2) p{
+    color: #ffffff;
+}
+.company{
+    padding: 30px;
+}
+.company > img {
+    width: 42px;
+}
+.company h4{
+    font-weight: 700;
+    color: #515769;
+    line-height: 1.4;
+    margin: 10px 0 15px 0;
+    font-size: 17px;
+}
+.company >p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #a6a7aa;
 }

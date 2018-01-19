@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body ms-controller="test">
-<div class="header">
+<div class="header min-width">
     <div class="img-container">
         <img src="./imgs/logo.png">
     </div>
-    <div class="menu">
+    <div class="menu right-margin">
         <ul>
             <li>
                 <a href="#">HOME</a>
             </li>
             <li>
-                <a href="#">ABOUT</a>
+                <a href="javascript: void(0)" ms-click="@goto('#about')">ABOUT</a>
             </li>
             <li>
-                <a href="#">EXPERIENCE</a>
+                <a href="javascript: void(0)" ms-click="@goto('#experience')">EXPERIENCE</a>
             </li>
             <li>
                 <a href="#">WORK</a>
@@ -33,8 +33,8 @@
         </ul>
     </div>
 </div>
-<div class="line"></div>
-<div class="middle am-cf" id="home">
+<div class="line min-width" id="line"></div>
+<div class="middle am-cf min-width" id="home">
     <div class="middle-left">
         <p class="name">
             陈叶
@@ -46,21 +46,21 @@
             Front-end Developer | 前端开发工程师
         </p>
     </div>
-    <div class="middle-right">
-        <img  ms-attr="{src:@img_src}">
+    <div class="middle-right right-margin">
+        <img ms-attr="{src:@img_src}">
         <div class="img-index">
-            <span ms-for="($index,el) in @img_arr" ms-click="@change_img($index)">
+            <span ms-for="($index,el) in @img_arr"  ms-class="[@img_index==$index?'img-index-clolr':'']" ms-click="@change_img($index)">
                 {{$index+1}}
             </span>
         </div>
     </div>
 </div>
-<div id="about" class="am-cf">
-    <div class="about-left">
+<div id="about" class="am-cf min-width">
+    <div class="about-left title">
         <h3>Intro</h3>
         <span>What I am all about.</span>
     </div>
-    <div class="about-right">
+    <div class="about-right right-margin">
         <div class="about-me">
             <p>
                 我是陈叶，毕业于成都东软学院，软件工程专业。
@@ -88,20 +88,46 @@
             </div>
             <span>Amaze UI</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar " style="width: 80%"></div>
+                <div class="am-progress-bar am-progress-bar-secondary" style="width: 80%"></div>
             </div>
             <span>JQUERY</span>
             <div class="am-progress am-progress-striped">
                 <div class="am-progress-bar " style="width: 85%"></div>
             </div>
-           
+
         </div>
     </div>
 </div>
-<div class="" id="experience">
-
+<div class="am-cf min-width" id="experience">
+    <div class="am-fl title">
+        <h3>Experience</h3>
+        <span>My work experience .</span>
+    </div>
+    <div class="am-fr right-margin" >
+        <div class="company-content">
+            <div class="company">
+                <img src="./imgs/xuetangyun.png">
+                <h4>兴唐信息技术有限公司</h4>
+                <p>从事前端开发工作，放大沙发大沙发和大沙发大沙发放大沙发沙发上放大沙发按时</p>
+            </div>
+        </div>
+        <div class="company-content">
+            <div class="company">
+                <img src="./imgs/xuetangyun.png">
+                <h4>兴唐信息技术有限公司</h4>
+                <p>从事前端开发工作，放大沙发大沙发和大沙发大沙发放大沙发沙发上放大沙发按时</p>
+            </div>
+        </div>
+        <div class="company-content">
+            <div class="company">
+                <img src="./imgs/xuetangyun.png">
+                <h4>兴唐信息技术有限公司</h4>
+                <p>从事前端开发工作，放大沙发大沙发和大沙发大沙发放大沙发沙发上放大沙发按时</p>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="work">
+<div id="work" class="min-width">
 
 </div>
 <div id="contact">
