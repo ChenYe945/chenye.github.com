@@ -8,7 +8,7 @@
     <script src="./js/amazeui.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body ms-controller="test">
 <div class="header">
     <div class="img-container">
         <img src="./imgs/logo.png">
@@ -34,28 +34,68 @@
     </div>
 </div>
 <div class="line"></div>
-<div class="middle" id="home">
+<div class="middle am-cf" id="home">
     <div class="middle-left">
         <p class="name">
             陈叶
         </p>
         <p class="name">
-            Kenton
+            Kenton{{@name}}
         </p>
         <p class="professional">
             Front-end Developer | 前端开发工程师
         </p>
     </div>
     <div class="middle-right">
-
+        <img  ms-attr="{src:@img_src}">
+        <div class="img-index">
+            <span ms-for="($index,el) in @img_arr" ms-click="@change_img($index)">
+                {{$index+1}}
+            </span>
+        </div>
     </div>
 </div>
-<div id="about">
+<div id="about" class="am-cf">
     <div class="about-left">
-
+        <h3>Intro</h3>
+        <span>What I am all about.</span>
     </div>
     <div class="about-right">
-
+        <div class="about-me">
+            <p>
+                我是陈叶，毕业于成都东软学院，软件工程专业。
+                从事web前端开发工作，是一名前端爱好者。
+                业余爱好打篮球、游泳。
+            </p>
+            <p>座右铭：只有你想不到，没有我做不到</p>
+        </div>
+        <div class="skill">
+            <span>HTML</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar am-progress-bar-danger" style="width: 99%"></div>
+            </div>
+            <span>CSS</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar am-progress-bar-warning" style="width: 97%"></div>
+            </div>
+            <span>JavaSript</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar am-progress-bar-success" style="width: 90%"></div>
+            </div>
+            <span>Avalon</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar " style="width: 90%"></div>
+            </div>
+            <span>Amaze UI</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar " style="width: 80%"></div>
+            </div>
+            <span>JQUERY</span>
+            <div class="am-progress am-progress-striped">
+                <div class="am-progress-bar " style="width: 85%"></div>
+            </div>
+           
+        </div>
     </div>
 </div>
 <div class="" id="experience">
@@ -67,5 +107,7 @@
 <div id="contact">
 
 </div>
+<script src="./js/avalon.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
