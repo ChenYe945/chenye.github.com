@@ -25,7 +25,7 @@
                 <a href="javascript: void(0)" ms-click="@goto('#experience')">EXPERIENCE</a>
             </li>
             <li>
-                <a href="#">WORK</a>
+                <a href="javascript: void(0)" ms-click="@goto('#work')">WORK</a>
             </li>
             <li>
                 <a href="#">CONTACT</a>
@@ -47,9 +47,10 @@
         </p>
     </div>
     <div class="middle-right right-margin">
-        <img ms-attr="{src:@img_src}">
+        <img ms-attr="{src:@img_src}" alt="图片">
         <div class="img-index">
-            <span ms-for="($index,el) in @img_arr"  ms-class="[@img_index==$index?'img-index-clolr':'']" ms-click="@change_img($index)">
+            <span ms-for="($index,el) in @img_arr" ms-class="[@img_index==$index?'img-index-clolr':'']"
+                  ms-click="@change_img($index)">
                 {{$index+1}}
             </span>
         </div>
@@ -72,27 +73,27 @@
         <div class="skill">
             <span>HTML</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar am-progress-bar-danger" style="width: 99%"></div>
+                <div class="am-progress-bar am-progress-bar-danger" style="width: 99%">99%</div>
             </div>
             <span>CSS</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar am-progress-bar-warning" style="width: 97%"></div>
+                <div class="am-progress-bar am-progress-bar-warning" style="width: 97%">97%</div>
             </div>
             <span>JavaSript</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar am-progress-bar-success" style="width: 90%"></div>
+                <div class="am-progress-bar am-progress-bar-success" style="width: 90%">90%</div>
             </div>
             <span>Avalon</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar " style="width: 90%"></div>
+                <div class="am-progress-bar " style="width: 90%">90%</div>
             </div>
             <span>Amaze UI</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar am-progress-bar-secondary" style="width: 80%"></div>
+                <div class="am-progress-bar am-progress-bar-secondary" style="width: 80%">80%</div>
             </div>
             <span>JQUERY</span>
             <div class="am-progress am-progress-striped">
-                <div class="am-progress-bar " style="width: 85%"></div>
+                <div class="am-progress-bar " style="width: 85%">85%</div>
             </div>
 
         </div>
@@ -101,9 +102,9 @@
 <div class="am-cf min-width" id="experience">
     <div class="am-fl title">
         <h3>Experience</h3>
-        <span>My work experience .</span>
+        <span>My work experience.</span>
     </div>
-    <div class="am-fr right-margin" >
+    <div class="am-fr right-margin">
         <div class="company-content">
             <div class="company">
                 <img src="./imgs/xuetangyun.png">
@@ -127,10 +128,51 @@
         </div>
     </div>
 </div>
-<div id="work" class="min-width">
-
+<div id="work" class="min-width am-cf">
+    <div class="am-fl title">
+        <h3>Works</h3>
+        <span>I build the real value.</span>
+    </div>
+    <div class="am-fr right-margin work-imgs">
+        <div class="left-img am-fl" ms-hover="[true ? 'show-model':'']">
+            <img src="./imgs/w1.png">
+            <div class="img-model" ></div>
+        </div>
+        <div class="right-img am-fr" ms-hover="[true ? 'show-model':'']">
+            <img src="./imgs/w3.jpg">
+            <div class="img-model"></div>
+        </div>
+        <div class="left-img am-fl img-3" ms-hover="[true ? 'show-model':'']">
+            <img src="./imgs/w2.png">
+            <div class="img-model"></div>
+        </div>
+    </div>
 </div>
 <div id="contact">
+    <div class="am-fl title">
+        <h3>Contacts</h3>
+        <span>Hire me.</span>
+    </div>
+    <div class="am-fr right-margin">
+        <div class="each-contact">
+            <h3>地址</h3>
+            <span>成都广都地铁口</span>
+        </div>
+        <div class="each-contact">
+            <h3>电话</h3>
+            <span>18140041701</span>
+        </div>
+        <div class="each-contact">
+            <h3>邮箱</h3>
+            <span>291013953@qq.com</span>
+        </div>
+        <div class="each-contact">
+            <h3>微博</h3>
+            <span>叶帅945</span>
+        </div>
+    </div>
+</div>
+<div class="footer">
 
 </div>
 <script src="./js/avalon.min.js"></script>
